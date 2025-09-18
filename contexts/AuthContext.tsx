@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext, useEffect, useCallback, ReactNode } from 'react';
-import { User, Company, LoginCredentials, RegisterCredentials, AuthState, Permission } from '../types';
+import { User, Company, LoginCredentials, RegisterCredentials, AuthState, Permission } from '../types.ts';
 import { authApi } from '../services/mockApi';
 import { hasPermission as checkPermission } from '../services/auth';
 import { api } from '../services/mockApi';
