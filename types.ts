@@ -283,11 +283,11 @@ export interface TimeEntryStatus {
   STOPPED: 'Stopped';
 }
 
-export interface IncidentSeverity {
-  LOW: 'Low';
-  MEDIUM: 'Medium';
-  HIGH: 'High';
-  CRITICAL: 'Critical';
+export enum IncidentSeverity {
+  LOW = 'Low',
+  MEDIUM = 'Medium',
+  HIGH = 'High',
+  CRITICAL = 'Critical',
 }
 
 export interface SiteUpdate {
@@ -316,12 +316,20 @@ export interface Weather {
   windSpeed: number;
 }
 
-export interface InvoiceStatus {
-  DRAFT: 'Draft';
-  SENT: 'Sent';
-  PAID: 'Paid';
-  OVERDUE: 'Overdue';
-  CANCELLED: 'Cancelled';
+export enum InvoiceStatus {
+  DRAFT = 'Draft',
+  SENT = 'Sent',
+  PAID = 'Paid',
+  OVERDUE = 'Overdue',
+  CANCELLED = 'Cancelled',
+}
+
+export enum QuoteStatus {
+  DRAFT = 'Draft',
+  SENT = 'Sent',
+  ACCEPTED = 'Accepted',
+  REJECTED = 'Rejected',
+  EXPIRED = 'Expired',
 }
 
 export interface Quote {
@@ -356,18 +364,19 @@ export interface CostBreakdown {
   overhead: number;
 }
 
-export interface TimesheetStatus {
-  DRAFT: 'Draft';
-  SUBMITTED: 'Submitted';
-  APPROVED: 'Approved';
-  REJECTED: 'Rejected';
+export enum TimesheetStatus {
+  DRAFT = 'Draft',
+  SUBMITTED = 'Submitted',
+  APPROVED = 'Approved',
+  REJECTED = 'Rejected',
+  PENDING = 'Pending',
 }
 
-export interface IncidentStatus {
-  OPEN: 'Open';
-  INVESTIGATING: 'Investigating';
-  RESOLVED: 'Resolved';
-  CLOSED: 'Closed';
+export enum IncidentStatus {
+  OPEN = 'Open',
+  INVESTIGATING = 'Investigating',
+  RESOLVED = 'Resolved',
+  CLOSED = 'Closed',
 }
 
 export interface AuditLog {
@@ -556,11 +565,11 @@ export interface CompanyType {
   CLIENT: 'Client';
 }
 
-export interface ExpenseStatus {
-  PENDING: 'Pending';
-  APPROVED: 'Approved';
-  REJECTED: 'Rejected';
-  PAID: 'Paid';
+export enum ExpenseStatus {
+  PENDING = 'Pending',
+  APPROVED = 'Approved',
+  REJECTED = 'Rejected',
+  PAID = 'Paid',
 }
 
 export interface OperationalAlert {
@@ -641,3 +650,38 @@ export const RolePermissions: Record<Role, Set<Permission>> = {
     Permission.SEND_DIRECT_MESSAGE,
   ]),
 };
+
+export enum EquipmentStatus {
+  AVAILABLE = 'Available',
+  IN_USE = 'In Use',
+  MAINTENANCE = 'Maintenance',
+  OUT_OF_SERVICE = 'Out of Service',
+}
+
+export enum DocumentStatus {
+  DRAFT = 'Draft',
+  PENDING = 'Pending',
+  APPROVED = 'Approved',
+  REJECTED = 'Rejected',
+}
+
+export enum AvailabilityStatus {
+  AVAILABLE = 'Available',
+  BUSY = 'Busy',
+  OFFLINE = 'Offline',
+}
+
+export enum NotificationType {
+  INFO = 'info',
+  WARNING = 'warning',
+  ERROR = 'error',
+  SUCCESS = 'success',
+}
+
+export enum ExpenseCategory {
+  MATERIALS = 'Materials',
+  LABOR = 'Labor',
+  EQUIPMENT = 'Equipment',
+  TRAVEL = 'Travel',
+  OTHER = 'Other',
+}
